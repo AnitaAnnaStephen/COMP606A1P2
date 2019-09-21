@@ -35,9 +35,9 @@
                                ?>  
                                <tr>  
                                    
-                                    <td><?php echo $row["MassageType"]." on ".$row['BookedDate']; ?></td>  
+                                    <td><?php echo $row["MassageType"]." on ".date('d-M-Y',strtotime($row['BookedDate'])); ?></td>  
                                     <td><a href="Edit.php?id=<?php echo $id; ?>"     class="btn">Edit</td>
-                                   <td><a href="Delete.php?id=<?php echo $id; ?>" class="btn">Cancel</td>
+                                   <td><a href="DeleteDB.php?id=<?php echo $id; ?>" class="btn" onclick="return confirm('Are you sure to cancel your appointment?')">Cancel</td>
                                    <td><a href="View.php?id=<?php echo $id; ?>" class="btn">View</td>
                                     <!-- <td><input type="button" name="edit" value="Edit" id="<?php echo $row["BookingId"]; ?>" class="btn btn-info btn-xs edit_data" /></td>  
                                     <td><input type="button" name="edit" value="Cancel" id="<?php echo $row["BookingId"]; ?>" class="btn btn-info btn-xs delete_data" /></td>  
