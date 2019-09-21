@@ -32,7 +32,7 @@ $result = mysqli_query($mysqli, $query);
                <div class="modal-content">
                     <div class="modal-header">
                          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>   -->
-                         <h4 class="modal-title">View Booking Details</h4>
+                         <h4 class="modal-title"><b>View Booking Details</b></h4>
                     </div>
                     <div class="modal-body">
                          <div class="row dates" style="margin:5px">
@@ -52,6 +52,7 @@ $result = mysqli_query($mysqli, $query);
                                         <td><label>Duration</label></td>
                                         <td><label>Amount</label></td>
                                         <td><label>Client</label></td>
+                                        <td><label>Client Message</label></td>
                                         <td><label>Booking Date</label></td>
                                         <td><label>Booking Time</label></td>
 
@@ -72,6 +73,8 @@ $result = mysqli_query($mysqli, $query);
                      <td >$' . $row["Amount"] . '</td>  
                       
                      <td >' . $row["FirstName"] . ' ' . $row["LastName"] . '</td>  
+
+                     <td >' . $row["MessageForTherapist"] .  '</td> 
                        
                      <td >' . $row["BookingDate"] . '</td>  
                       
