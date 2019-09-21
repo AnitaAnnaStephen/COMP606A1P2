@@ -1,5 +1,6 @@
 <!-- This page cancels the booking made by user in to the database -->
 <?php
+session_start();
 $message='';
 if (isset($_GET['id']))
 {
@@ -31,8 +32,8 @@ if (isset($_GET['id']))
                                 echo($mysqli->error);
                                  } 
                                 else {
-                                    
-                                    $message='finedetails added';
+                                    $_SESSION['messages'] = 'Penality for late cancellation!!';
+                                    //$message='finedetails added';
                                     
                                }
                             }
@@ -40,10 +41,11 @@ if (isset($_GET['id']))
                                 $sql="UPDATE Bookings
                                 SET BookingStatus='Cancelled' 
                                 WHERE Bookingid='$bookingid'"; 
+                                $_SESSION['messages'] = 'Cancellation Success!!';
                             }
        
         if ($mysqli->query($sql) === TRUE) {
-            echo "Booking cancelled successfully";
+            //echo "Booking cancelled successfully";
             header("Location: UserHome.php");
         } else {
             echo "Error updating record: " . $mysqli->error;
