@@ -17,7 +17,10 @@ $result = mysqli_query($mysqli, $query);
 <html>
 
 <head>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+     
+     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
      <title>View Booking</title>
      <style>
           .container-view{
@@ -25,6 +28,7 @@ $result = mysqli_query($mysqli, $query);
           }
      </style>
 </head>
+
 
 <body>
      <div id="" class="container-view">
@@ -95,7 +99,7 @@ $result = mysqli_query($mysqli, $query);
                </div>
           </div>
      </div>
-</body>
+</body> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
 
