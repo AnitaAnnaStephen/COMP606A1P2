@@ -20,7 +20,7 @@ if (isset($_POST["book"])) {
     $row = mysqli_num_rows($result);
     
     if ($row == 0) {//Checking if time slot is already booked by the same user
-        $sql1 = "select * from bookings where BookingStatus<>'Cancelled' and email='" . $email . "' and serviceid=" . $serviceid . " and bookedtime='" . $bookedtime . "' and bookeddate='" . $bookeddate . "'";
+        $sql1 = "select * from bookings where BookingStatus<>'Cancelled' and email='" . $email . "' and bookedtime='" . $bookedtime . "' and bookeddate='" . $bookeddate . "'";
         $result1 = mysqli_query($mysqli, $sql1);
         $row1 = mysqli_num_rows($result1);
         if ($row1 == 0) {
@@ -29,7 +29,7 @@ if (isset($_POST["book"])) {
                     $_SESSION['message'] = 'Please select a date!!';
                     header("Location: BookAppointment.php");
                 }
-             else if($bookeddate>=$today || $bookeddate=='0000-00-00')//Checking if booking is a past date
+             else if($bookeddate>=$today )//Checking if booking is a past date
                 {
                     //Saving data to the database using SP
                     //spAddBooking inserts values to Bookings table
@@ -54,12 +54,13 @@ if (isset($_POST["book"])) {
             
         } 
         else {
-            $_SESSION['message'] = 'Already Booked!!';
+            $_SESSION['message'] = 'You Already Booked for this time slot!!';
             header("Location: BookAppointment.php");
              }
     } else {
 
         $_SESSION['message'] = 'Therapist unavailable!!';
         header("Location: BookAppointment.php");
-    }
-}?>
+            }
+}
+?>
