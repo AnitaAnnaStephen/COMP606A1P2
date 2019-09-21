@@ -40,7 +40,7 @@ if (isset($_POST["book"])) {
                      echo ($mysqli->error);
                     }
                      else {
-                        header("Location: UserHome.php"); //redirecting to Home page                       
+                        header("Location: BookingConfirm.php"); //redirecting to Home page                       
                         }
                 }
            
