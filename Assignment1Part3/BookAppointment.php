@@ -65,13 +65,13 @@ $result = mysqli_query($mysqli, $query);
   </style>
 </head>
 
-<body>
+<body style="background-color:silver;">
   <span style="color:red;"><?php if (isset($_SESSION['message'])) {
                               echo $_SESSION['message'];
                               $_SESSION['message'] = "";;
                             }  ?></span>
   <div class="flex-container container">
-    <table class="table table-striped">
+    <table class="table table-striped" style="background-color: lightgrey;">
       <thead>
         <tr>
           <th>Massage Type</th>
@@ -114,11 +114,11 @@ $result = mysqli_query($mysqli, $query);
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
+                        <h4 class="modal-title"><b>More Info</b></h4>
                       </div>
                       <div class="modal-body">
                         <div class="form-group">
-                          <label for="therapistname" name="<?php echo $row['ServiceId'] ?>">Therapist Name:</label>
+                          <label for="therapistname" name="<?php echo $row['ServiceId'] ?>">Select Therapist :</label>
                           <select name="therapist" id="therapist">
                             <?php
                               $sql = "select (SELECT concat(firstname,' ',lastname) FROM `employeedetails` where EmployeeId=therapistdetails.EmployeeId)'name',employeeid from therapistdetails where serviceid=" . $row['ServiceId'];
@@ -130,7 +130,7 @@ $result = mysqli_query($mysqli, $query);
                             <?php } ?>
                           </select>
                           <br />
-                          <label for="comment">Comment:</label>
+                          <label for="comment">Motivation for making the Appointment:</label>
                           <textarea class="form-control" rows="5" id="message" name="message"></textarea>
                         </div>
                       </div>
