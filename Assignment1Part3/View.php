@@ -11,10 +11,11 @@
  ?> 
  <html>
      <head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
      <title>View  Booking</title> 
     </head>
     <body>
-    <div id="add_data_Modal" class="modal fade" style="text-align:centre;">  
+    <div id="add_data_Modal" class="container">  
       <div class="modal-dialog">  
            <div class="modal-content">  
                 <div class="modal-header">  
@@ -36,7 +37,7 @@
                 </tr>  
                 <tr>  
                      <td width="30%"><label>Massage Date</label></td>  
-                     <td width="70%">'.$row["BookedDate"].'</td>  
+                     <td width="70%">'.date('d-M-Y',strtotime($row['BookedDate'])).'</td>  
                 </tr>  
                 <tr>  
                      <td width="30%"><label>Massage Time</label></td>  
@@ -71,7 +72,7 @@
                        
                 </div>  
                  <div class="modal-footer">  
-                 <a href="UserHome.php" >Go back</a>
+                 <a href="UserHome.php" class="btn btn-info">Go back</a>
                       
                 </div>   
            </div>  
