@@ -53,6 +53,7 @@ if (isset($_POST['register']))
             else {
                 //Saving values to session variables to use later.
                 $_SESSION['firstname']=$firstname;
+                $_SESSION['lastname']=$lastname;
                 $_SESSION['username']=$email;
               
         echo '<p>Thank you for registering with us :).We are sure you will find our website useful.</p>';
