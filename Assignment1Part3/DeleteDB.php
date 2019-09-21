@@ -1,7 +1,7 @@
 <!-- This page cancels the booking made by user in to the database -->
 <?php
 $message='';
-if (isset($_POST['delete']))
+if (isset($_GET['id']))
 {
     require 'dbconnect.php';//Establishing connection with database
     $bookingid=$_GET["id"];
