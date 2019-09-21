@@ -18,7 +18,7 @@
 
 .flex-container > div {
   background-color: #f1f1f1;
-  width: 260px;
+  width: 300px;
   margin: 10px;
   text-align: center;
   line-height: 75px;
@@ -43,7 +43,7 @@ if (isset($_SESSION['firstname']))
 }
 ?>
 <div class="flex-container">
-  <div><a href="ViewBookings.php">View Bookings</a></div>
+  <div><a href="ViewBookings.php">View Your Bookings</a></div>
    
 </div>
 <a href="Logout.php" style="font-weight:bold;background-color:Blue;">Logout</a>
