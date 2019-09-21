@@ -41,7 +41,7 @@ if (isset($_SESSION['firstname']))
 <div class="flex-container">
   <div><a href="AddEmployees.php">Add new employees</a></div>
   <div><a href="AssignServices.php">Assign Services</a></div>
-   
+  <div><a href="ViewAllBookings.php">View All Bookings</a></div>
 </div>
 <div><a href="Logout.php" style="font-weight:bold;background-color:Blue;">Logout</a></div>
 </body>
