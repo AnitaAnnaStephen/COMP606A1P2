@@ -17,7 +17,7 @@ if (isset($_SESSION['firstname']))
      echo '<h2>REGISTRATION SUCCESSFUL.!!</h2>';
      echo '<p1>Hello '.$firstname.',</p1>';
      echo '<p>Thank you for registering with us :).We are sure you will find our website useful.</p>';
-     echo  '<a href="EditBooking.php">Click here to continue using the website.</a>';//Redirect to page to see user data
+     echo  '<a href="Userhome.php">Click here to continue using the website.</a>';//Redirect to page to see user data
      echo  '</br>';
      echo '<h3> Welcome Aboard!</h3>';                        
 }
