@@ -1,8 +1,8 @@
 <?php
-include('EditDB.php');
+//include('EditDB.php');
 require("usertab.php");
 require 'dbconnect.php';
-
+ 
 $currentDateTime = date('Y-m-d');
 $bookingid = $_GET["id"];
 $query = "SELECT * FROM Bookings WHERE BookingId=$bookingid";
@@ -12,6 +12,8 @@ $s = $row['ServiceId'];
 $e = $row['EmployeeId'];
 $d = $row['BookedDate'];
 $t = $row['Bookedtime'];
+$m = $row['MessageForTherapist'];
+$_SESSION['Id']=$bookingid;
 // var_dump($s);
 ?>
 <html>
@@ -21,17 +23,17 @@ $t = $row['Bookedtime'];
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 
-<body>
+<body style="background-color:silver;">
      <div class="container">
      <div id="add_data_Modal" class="">
           <div class="modal-dialog">
                <div class="modal-content">
                     <div class="modal-header">
                          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>   -->
-                         <h4 class="modal-title">Edit Booking</h4>
+                         <h4 class="modal-title"><b>Edit Booking</b></h4>
                     </div>
                     <div class="modal-body">
-                         <form method="post" id="insert_form">
+                         <form method="post" id="insert_form" action="EditDB.php">
                               
                               <label>Select Massage Type</label>
                               <select name="MassageType" id="MassageType" class="form-control" >
@@ -76,12 +78,14 @@ $t = $row['Bookedtime'];
                               </select>
 
                               <br />
+                              <label for="comment">Motivation for making the Appointment:</label>
+                          <textarea class="form-control" rows="5" id="message" name="message"value="<?php echo $m;?>"><?php echo $m;?></textarea>
                               <input type="hidden" name="booking_id" id=<?php echo $bookingid; ?> />
                               <div class="col-sd-6">
                                   
                               <button type="submit" id="btn" name="edit" class="btn btn-success"> Confirm</button>
                                   
-                              <a href="userhome.php" id="btn" class="btn btn-success"  style="background-color:#de2855;border-color:#de2855;float:right">Cancle</a>
+                              <a href="userhome.php" id="btn" class="btn btn-success"  style="background-color:#de2855;border-color:#de2855;float:right">Cancel</a>
                                    
                                    </div>
                          </form>
