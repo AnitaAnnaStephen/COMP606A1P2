@@ -1,11 +1,11 @@
 <?php  
- include('EditDB.php');
+ //include('EditDB.php');
  require("usertab.php");
  require 'dbconnect.php';
      $output='';
      $currentDateTime = date('Y-m-d');
      $bookingid=$_GET["id"];
-     $query = "SELECT B.MassageType,B.Duration,B.Amount,B.BookingDate,B.BookingTime,B.BookedDate,
+     $query = "SELECT B.MassageType,B.Duration,B.Amount,B.BookingDate,B.BookingTime,B.BookedDate,B.MessageForTherapist,
      B.BookedTime,B.BookingStatus,E.FirstName,E.LastName FROM Bookings B JOIN EmployeeDetails E ON B.EmployeeId=E.EmployeeId WHERE  BookingId =$bookingid";
      $result = mysqli_query($mysqli, $query);
  ?> 
@@ -14,13 +14,13 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
      <title>View  Booking</title> 
     </head>
-    <body>
+    <body style="background-color:silver;">
     <div id="add_data_Modal" class="container">  
       <div class="modal-dialog">  
            <div class="modal-content">  
                 <div class="modal-header">  
                      <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>   -->
-                     <h4 class="modal-title">View Booking Details</h4>  
+                     <h4 class="modal-title"><b>View Booking Details</b></h4>  
                 </div>  
                 <div class="modal-body">  
                     
@@ -62,6 +62,10 @@
                 <tr>  
                      <td width="30%"><label>Booking Time</label></td>  
                      <td width="70%">'.$row["BookingTime"].'</td>  
+                </tr>
+                <tr>  
+                     <td width="30%"><label>Motivation for making appointment</label></td>  
+                     <td width="70%">'.$row["MessageForTherapist"].'</td>  
                 </tr>
                ';  
       }  
