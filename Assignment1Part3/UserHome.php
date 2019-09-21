@@ -1,5 +1,6 @@
 <?php  
  require("usertab.php");
+ 
  require 'dbconnect.php';
  $fname=$_SESSION['firstname'];
      $lname=$_SESSION['lastname'];
@@ -18,13 +19,18 @@
           <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>   -->
       </head>  
       <body style="background-color: silver;">  
+      <span style="color:red;"><?php if (isset($_SESSION['messages'])) {
+           echo $_SESSION['messages'];
+           
+                              $_SESSION['messages'] = "";;
+                            }  ?></span>
            <br /><br />  
            <div class="container" style="width:700px;">  
-                <h3 align="center">Your upcoming bookings</h3>  
+                <h3 align="center"><b>Your upcoming bookings</b></h3>  
                 <br />  
                 <div class="table-responsive">  
                      <div align="right">  
-                     <a href="BookAppointment.php" class="btn" style="background-color:#fff;">Book new Appointment</a>  
+                     <a href="BookAppointment.php" class="btn" style="background-color: black;color: beige;">Book New Appointment</a>  
                      </div>  
                      <br />  
                      <div id="bookings_table">  
