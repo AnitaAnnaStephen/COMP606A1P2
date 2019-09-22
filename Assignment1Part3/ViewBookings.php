@@ -30,10 +30,10 @@ $result = mysqli_query($mysqli, $query);
 </head>
 
 
-<body>
+<body style="background-color:silver;">
      <div id="" class="container-view">
           <div class="" style="width:1505px">
-               <div class="modal-content">
+               <div class="modal-content" style="align-items: center;">
                     <div class="modal-header">
                          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>   -->
                          <h4 class="modal-title"><b>View Booking Details</b></h4>
