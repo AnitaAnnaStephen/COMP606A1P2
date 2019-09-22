@@ -1,3 +1,4 @@
+<!-- Page to edit the bookings by the user. -->
 <?php
 //include('EditDB.php');
 require("usertab.php");
