@@ -1,4 +1,4 @@
-<!-- This page saves the data entered by user in to the database after required validations -->
+<!-- This page edit the booking entered by user in to the database after required validations -->
 <?php
 
 session_start();
@@ -48,7 +48,7 @@ if (isset($_POST['edit'])) {
         $row = mysqli_num_rows($result);
 
         if ($row == 0) { //Checking if time slot is already booked by the same user
-            $sql1 = "select * from bookings where BookingStatus<>'Cancelled' and email='" . $e . "' and serviceid=" . $s . " and bookedtime='" . $bookedtime . "' and bookeddate='" . $bookeddate . "'";
+            $sql1 = "select * from bookings where BookingStatus<>'Cancelled' and email='" . $e . "' and bookedtime='" . $bookedtime . "' and bookeddate='" . $bookeddate . "'";
             $result1 = mysqli_query($mysqli, $sql1);
             $row1 = mysqli_num_rows($result1);
             if ($row1 == 0) {
