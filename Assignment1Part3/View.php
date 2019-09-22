@@ -1,3 +1,4 @@
+<!-- Page that displays booking info on click of View button. -->
 <?php  
  //include('EditDB.php');
  require("usertab.php");
