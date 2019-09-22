@@ -1,3 +1,4 @@
+<!-- Header for the user pages. -->
 <?php
 include('UserCheck.php');?>
 <!DOCTYPE html>
