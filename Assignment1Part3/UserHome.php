@@ -1,3 +1,4 @@
+<!-- Home page for users that displays the upcoming bookings with edit,delete and view options. -->
 <?php  
  require("usertab.php");
  
