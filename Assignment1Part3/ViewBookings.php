@@ -1,3 +1,4 @@
+<!-- View  bookings for employees. -->
 <?php
 require("heading.php");
 require 'dbconnect.php';
