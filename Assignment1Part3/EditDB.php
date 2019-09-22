@@ -48,7 +48,7 @@ if (isset($_POST['edit'])) {
         $row = mysqli_num_rows($result);
 
         if ($row == 0) { //Checking if time slot is already booked by the same user
-            $sql1 = "select * from bookings where BookingStatus<>'Cancelled' and email='" . $e . "' and bookedtime='" . $bookedtime . "' and bookeddate='" . $bookeddate . "'";
+            $sql1 = "select * from bookings where BookingStatus<>'Cancelled' and email='" . $e ."' and bookedtime='" . $bookedtime . "' and bookeddate='" . $bookeddate . "'";// "' and serviceid=" . $s . 
             $result1 = mysqli_query($mysqli, $sql1);
             $row1 = mysqli_num_rows($result1);
             if ($row1 == 0) {
@@ -65,7 +65,7 @@ if (isset($_POST['edit'])) {
                         $_SESSION['messages'] = 'Failed to update';
                         echo ($mysqli->error);
                     } else {
-                        $_SESSION['messages'] = 'Record updated successfully!!';
+                        $_SESSION['messages'] = 'Record updated successfullys!!';
                         header("Location: UserHome.php"); //redirecting to Home page                       
                     }
                 } else {
