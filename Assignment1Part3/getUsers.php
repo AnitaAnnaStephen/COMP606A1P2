@@ -1,3 +1,4 @@
+<!-- Fetches the employees offering a particular service. -->
 <?php
 include "dbconnect.php";
 
