@@ -17,7 +17,9 @@ $result = mysqli_query($mysqli, $query);
 <html>
 
 <head>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
      <title>View Booking</title>
      <style>
           .container-view{
@@ -26,10 +28,10 @@ $result = mysqli_query($mysqli, $query);
      </style>
 </head>
 
-<body>
+<body style="background-color:silver;">
      <div id="" class="container-view">
           <div class="" style="width:1505px">
-               <div class="modal-content">
+               <div class="modal-content" style="align-items: center;">
                     <div class="modal-header">
                          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>   -->
                          <h4 class="modal-title">View Booking Details</h4>
