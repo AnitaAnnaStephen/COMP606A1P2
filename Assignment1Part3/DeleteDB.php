@@ -1,4 +1,4 @@
-<!-- This page cancels the booking made by user in to the database -->
+<!-- This page update the status of booking made by user in to the database -->
 <?php
 session_start();
 $message='';
