@@ -10,7 +10,7 @@
     </style>
 </head>
 
-<body>
+<body style="background-color:silver;">
     <div id="add_data_Modal" class="container">
         <div class="modal-dialog modal-xlg">
             <div class="modal-content">
