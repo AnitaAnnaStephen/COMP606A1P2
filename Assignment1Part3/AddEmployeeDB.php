@@ -45,16 +45,9 @@ if (isset($_POST['register']))
             echo($mysqli->error);
              } 
             else {
-                //Saving values to session variables to use later.
+                
                 $message='Employee added';
-                // if($isadmin=0)
-                // {
-                //     header("Location: AssignServices.php");//redirecting to Welcome page                       
-                // }
-                // else
-                // {
-                // header("Location: AdminHome.php");//redirecting to Welcome page                       
-                // }
+               
             }
           }     
     }     
