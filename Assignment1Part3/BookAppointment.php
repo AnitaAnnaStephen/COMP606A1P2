@@ -6,7 +6,7 @@ $query = "SELECT * FROM services";
 $result = mysqli_query($mysqli, $query);
 ?>
 
-<!-- Page to welcome user on successful registration -->
+
 <html>
 
 <head>
