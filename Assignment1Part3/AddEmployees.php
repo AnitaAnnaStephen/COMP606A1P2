@@ -57,11 +57,12 @@
             
             <p style="padding-left:250px;">
                 
-                <button type="submit" id="btn" name="register"> Add Employee </button>
+                <button type="submit" id="btn" name="register" style="width: 160px;"> Add Employee </button>
                 
-                <a href="AdminHome.php" style="padding-left: 55px;text-align:right;">Go to Admin Page</a>
+               
             </p>
             </div>
+            <a href="AdminHome.php" style="padding-left: 55px;text-align:right;">Go to Admin Page</a>
         </form>
     </body>
     <?php require("footer.php"); ?>
