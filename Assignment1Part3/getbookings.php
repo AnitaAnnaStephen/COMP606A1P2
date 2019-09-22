@@ -1,3 +1,4 @@
+<!-- Fetch the bookings for a particular employee from the database. -->
 <?php
 include "dbconnect.php";
 //  echo $_POST['sid'];
