@@ -1,3 +1,4 @@
+<!-- Save the bookings to database after necessary validations. -->
 <?php
 session_start();
 
