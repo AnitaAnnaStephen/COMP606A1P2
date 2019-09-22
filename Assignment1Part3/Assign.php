@@ -13,6 +13,8 @@ if (isset($_POST['register']))
          
 }
 //function to check and assign services for employees
+//two parameters employeeid and serviceid
+//returns message
 function assignServices($employeeid,$serviceid){
   require 'dbconnect.php';//Establishing connection with database
   //Checking if the entry already exists in the database
@@ -35,7 +37,7 @@ function assignServices($employeeid,$serviceid){
       else {
           $message="Service Assigned";
           return $message;
-        // header("Location: AssignServices.php");//redirecting to Assign services page                       
+                           
           }
     }     
 }
