@@ -1,5 +1,5 @@
+<!-- Page displaying booking confirmation. -->
 <html>
-
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <title>View Booking</title>
