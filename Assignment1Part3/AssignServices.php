@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Add Employees</title>
+        <title>Assign Services</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <?php require("heading.php"); ?>
@@ -21,10 +21,9 @@
                 
                  <span style="color:red;"><?php echo $message; ?></span> 
             </p>
-            <div id="details">
+            <div id="details" style="text-align:center;">
             <?php
-                echo '</br>';
-                echo '</br>';
+               
              $sql1 = mysqli_query($mysqli, "SELECT MassageType,ServiceId FROM Services");  
              $sql2 = mysqli_query($mysqli, "SELECT FirstName,EmployeeId FROM EmployeeDetails WHERE IsAdmin=0"); ?>         
             <p>
@@ -56,11 +55,12 @@
             
             <p style="padding-left:250px;">
                 
-                <button type="submit" id="btn" name="register"> Assign Service</button>
+                <button type="submit" id="btn" name="register"style="width: 160px;margin-left:-15%;"> Assign Service</button>
                 
-                <a href="AdminHome.php" style="padding-left: 55px;text-align:right;">Go to Admin Page</a>
+                
             </p>
             </div>
+            <a href="AdminHome.php" style="padding-left: 55px;text-align:right;">Go to Admin Page</a>
         </form>
     </body>
     <?php require("footer.php"); ?>
