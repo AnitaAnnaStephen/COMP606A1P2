@@ -1,3 +1,4 @@
+<!-- View all bookings for admin. -->
 <?php
 require("heading.php");
 require 'dbconnect.php';
