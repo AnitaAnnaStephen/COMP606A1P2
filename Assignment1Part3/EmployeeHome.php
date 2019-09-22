@@ -46,7 +46,7 @@ if (isset($_SESSION['firstname']))
   <div><a href="ViewBookings.php">View Your Bookings</a></div>
    
 </div>
-<a href="Logout.php" style="font-weight:bold;background-color:Blue;">Logout</a>
+<!-- <a href="Logout.php" style="font-weight:bold;background-color:Blue;">Logout</a> -->
 </body>
 <?php require("footer.php"); ?>
 </html>
